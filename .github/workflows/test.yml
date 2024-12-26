@@ -27,7 +27,8 @@ jobs:
 
       - name: Run SourcePackagesParserTests
         run: |
-          xcodebuild -scheme spp test \
+          xcodebuild test \
+            -scheme spp \
             -only-testing:SourcePackagesParserTests \
             -destination "platform=macOS,arch=arm64" \
             -resultBundlePath TestResults/result_bundle | \
